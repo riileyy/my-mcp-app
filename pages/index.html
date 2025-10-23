@@ -21,17 +21,21 @@
 
       if (!apiKey) return alert("API Key를 입력해주세요.");
 
-      const res = await fetch("/api/mcp-connect", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ apiKey, profile })
-      });
+      try {
+        const res = await fetch("/api/mcp-connect", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ apiKey, profile })
+        });
 
-      const data = await res.json();
-      if (res.ok) {
-        alert("연결 성공! 사용 가능한 도구: " + data.tools.join(", "));
-      } else {
-        alert("연결 실패: " + data.error);
+        const data = await res.json();
+        if (res.ok) {
+          alert("연결 성공! 사용 가능한 도구: " + data.tools.join(", "));
+        } else {
+          alert("연결 실패: " + data.error);
+        }
+      } catch (err) {
+        alert("서버 연결 실패: " + err.message);
       }
     });
   </script>
