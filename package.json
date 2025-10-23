@@ -1,0 +1,11 @@
+{
+  "name": "my-mcp-app",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "vercel": "^28.0.0"
+  }
+}
