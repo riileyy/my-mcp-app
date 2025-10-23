@@ -1,7 +1,11 @@
-my-mcp-app.zip
-├─ pages/
-│  ├─ index.html          # Configure 버튼 UI
-│  └─ api/
-│     └─ mcp-connect.js   # Vercel 서버에서 MCP 연결 처리
-├─ package.json
-└─ README.md
+{
+  "name": "my-mcp-app",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "vercel": "^28.0.0"
+  }
+}
