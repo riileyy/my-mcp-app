@@ -10,7 +10,8 @@ export default async function handler(req, res) {
   if (!apiKey) return res.status(400).json({ error: "API Key가 필요합니다." });
 
   try {
-    const url = new URL("https://server.smithery.ai/@isnow890/naver-search-mcp/mcp");
+    // ✅ my-mcp-app 기준으로 URL 수정
+    const url = new URL("https://server.smithery.ai/@riileyy/my-mcp-app/mcp");
     url.searchParams.set("api_key", apiKey);
     url.searchParams.set("profile", profile || "default-profile");
 
