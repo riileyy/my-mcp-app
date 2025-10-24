@@ -8,9 +8,7 @@
         "-y",
         "@smithery/cli@latest",
         "run",
-        "@yourname/naver-search-mcp",
-        "--profile",
-        "naver-profile"
+        "@riileyy/my-mcp-app"
       ],
       "env": {
         "NAVER_CLIENT_ID": { "configure": "text", "label": "Naver Client ID" },
