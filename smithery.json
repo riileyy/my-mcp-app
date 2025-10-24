@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "naver-search-mcp": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@yourname/naver-search-mcp",
+        "--profile",
+        "naver-profile"
+      ],
+      "env": {
+        "NAVER_CLIENT_ID": { "configure": "text", "label": "Naver Client ID" },
+        "NAVER_CLIENT_SECRET": { "configure": "password", "label": "Naver Client Secret" }
+      }
+    }
+  }
+}
