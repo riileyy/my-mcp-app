@@ -1,4 +1,3 @@
-// pages/api/naver-search.js
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "POST 요청만 허용됩니다." });
@@ -19,7 +18,6 @@ export default async function handler(req, res) {
         },
       }
     );
-
     const data = await response.json();
     res.status(200).json(data);
   } catch (err) {
